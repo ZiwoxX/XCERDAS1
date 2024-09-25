@@ -24,7 +24,7 @@ const Schedule = () => {
         ["Amel", "Helmalia", "Fadli I", "Shera", "Nicollas"],
         ["Windi", "Lista", "Jeriko", "Pratiwi", "Damar"],
         ["Ainul Mardhiyyah", "Alisha Dayana", "Enjel", "Ferdynand", "Najim Al Haqoni"],
-        ["Cariska", "Nila", "Wahid", "Togi", "Annisa"],
+        ["Jihan Nur Asqa", "Andini", "Muh Hizam Qabbani", "Muh Resqi Mubaraq", "Aldian Saputra"],
         ["Sultan", "Zaini", "Fajri", "Arif"],
     ]
 
