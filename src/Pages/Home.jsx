@@ -4,29 +4,33 @@ import BoxTextAnonim from "../components/BoxTextAnonim"
 import Navbar from "../components/Navbar"
 
 const Home = () => {
-	return (
-		<div className="text-white px-[10%]" id="Home">
-			<Navbar />
-			<div className="lg:hidden">
-				<div className="font-bold text-5xl text-center py-20 ">IX 3 MTSN</div>
-				<div
-					className="border-2 flex justify-between px-10 text-4xl font-bold py-2 relative"
-					id="TotalSiswa">
-					<div id="AngkaGradientBlue" className="flex items-center justify-center ">
-						25
-					</div>
-					<div className="">
-						<span id="AngkaGradientBlue" className="text-5xl">
-							3
-						</span>
-						<span id="AngkaGradientPink" className="text-5xl">
-							7
-						</span>
-					</div>
-					<div id="AngkaGradientPink" className="flex items-center justify-center">
-						12
-					</div>
-				</div>
+    return (
+        <div className="text-white px-[10%]" id="Home">
+            <Navbar />
+            <div className="lg:hidden">
+                <div className="font-bold text-5xl text-center py-20">IX 3 MTSN</div>
+                {/* Teks "Total Siswa" yang lebih keren */}
+                <h2 className="text-3xl font-semibold text-center py-4">
+                    <span className="text-gradient">Total Siswa</span>
+                </h2>
+                <div
+                    className="border-2 flex justify-between px-10 text-4xl font-bold py-2 relative"
+                    id="TotalSiswa">
+                    <div id="AngkaGradientBlue" className="flex items-center justify-center">
+                        11
+                    </div>
+                    <div className="">
+                        <span id="AngkaGradientBlue" className="text-5xl">
+                            2
+                        </span>
+                        <span id="AngkaGradientPink" className="text-5xl">
+                            5
+                        </span>
+                    </div>
+                    <div id="AngkaGradientPink" className="flex items-center justify-center">
+                        14
+                    </div>
+                </div>
 
 				<div className="grid grid-cols-2 md:grid-cols-2 gap-7 md:gap-5">
 					<div className="grid gap-2 md:gap-0 md:grid-cols-1">
