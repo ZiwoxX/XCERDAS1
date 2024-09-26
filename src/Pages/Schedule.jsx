@@ -25,7 +25,7 @@ const Schedule = () => {
         ["Windi", "Lista", "Jeriko", "Pratiwi", "Damar"],
         ["Ainul Mardhiyyah", "Alisha Dayana", "Enjel", "Ferdynand", "Najim Al Haqoni"],
         ["Jihan Nur Asqa", "Andini", "Muh Hizam Qabbani", "Muh Resqi Mubaraq", "Aldian Saputra"],
-        ["Sultan", "Zaini", "Fajri", "Arif"],
+        ["Nurul  Fitria Yusuf", "Cahaya Musdalifah", "Ahmad Syukran Baihaqi", "Mahmudani"],
     ]
 
     const dayComponents = [
