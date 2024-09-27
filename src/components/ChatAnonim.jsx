@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { addDoc, collection, query, orderBy, onSnapshot } from "firebase/firestore";
+import { addDoc, collection, query, orderBy, onSnapshot, getDocs } from "firebase/firestore";
 import { db, auth } from "../firebase";
 import axios from "axios";
 import Swal from "sweetalert2";
@@ -27,13 +27,16 @@ function Chat() {
   }
 
   useEffect(() => {
-    const chatsCollectionRef = collection(db, "chats");
+    // Memuat pesan dari Firestore dan mengatur langganan untuk memantau perubahan
     const queryChats = query(chatsCollectionRef, orderBy("timestamp"));
     const unsubscribe = onSnapshot(queryChats, (snapshot) => {
-      const newMessages = snapshot.docs.map((doc) => ({
-        id: doc.id, // Simpan ID dokumen jika perlu
-        ...doc.data(),
-      }));
+      const newMessages = snapshot.docs.map((doc) => {
+        const data = doc.data();
+        return {
+          ...data,
+          userIp: data.userIp,
+        };
+      });
       setMessages(newMessages);
       if (shouldScrollToBottom) {
         scrollToBottom();
@@ -88,7 +91,7 @@ function Chat() {
     if (currentDateString === storedDateString) {
       // Jika tanggal saat ini sama dengan tanggal yang disimpan, periksa batasan pesan
       const userSentMessageCount = parseInt(localStorage.getItem(userIpAddress)) || 0;
-      if (userSentMessageCount >= 100) { // Batasan pesan per hari (2 pesan)
+      if (userSentMessageCount >= 20) { // Batasan pesan per hari (2 pesan)
         Swal.fire({
           icon: "error",
           title: "Message limit exceeded",
@@ -180,15 +183,15 @@ function Chat() {
         Text Anonim
       </div>
 
-      <div id="KotakPesan">
-  {messages.map((msg) => (
-    <div key={msg.id} className="message">
-      <img src={msg.sender.image} alt="User" />
-      <span>{msg.message}</span>
-    </div>
-  ))}
-  <div ref={messagesEndRef}></div>
-</div>
+      <div className="mt-5" id="KotakPesan" style={{ overflowY: "auto" }}>
+        {messages.map((msg, index) => (
+          <div key={index} className="flex items-start text-sm py-[1%]">
+            <img src={msg.sender.image} alt="User Profile" className="h-7 w-7 mr-2 " />
+            <div className="relative top-[0.30rem]">{msg.message}</div>
+          </div>
+        ))}
+        <div ref={messagesEndRef}></div>
+      </div>
       <div id="InputChat" className="flex items-center mt-5">
         <input
           className="bg-transparent flex-grow pr-4 w-4 placeholder:text-white placeholder:opacity-60"
