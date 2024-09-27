@@ -66,7 +66,7 @@ const StrukturKelas = () => {
 				{/* wakil dan ketua */}
 				<div className="flex relative top-[-3rem]" data-aos="fade-up" data-aos-duration="1200">
 					<div className="relative left-[0.2rem]">
-						<BorderStruktur Jabatan="Ketua Kelas" Nama="Ahmad Syukron Baihaqi" Width="120px" />
+						<BorderStruktur Jabatan="Ketua Kelas" Nama="Ahmad Syukran Baihaqi" Width="120px" />
 					</div>
 					<img src="LineHorizontalPendek.svg" className="relative top-3" />
 					<img src="LineHorizontalPendek.svg" className="relative top-3 hidden lg:flex" />
@@ -210,7 +210,7 @@ const StrukturKelas = () => {
 					</div>
 
 					<div className="flex-col hidden lg:flex">
-						<BorderStruktur Jabatan="Pelajaran" Nama="Najim Al Haqoni" Width="120px" />
+						<BorderStruktur Jabatan="Pendidikan" Nama="Alisha Dayana" Width="120px" />
 						<div className="py-[3%]"></div>
 						<BorderStruktur Jabatan="" Nama="Ferdynand" Width="120px" />
 					</div>
