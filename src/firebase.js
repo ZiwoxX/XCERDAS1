@@ -8,6 +8,7 @@ import {getAuth, GoogleAuthProvider} from 'firebase/auth'
 const firebaseConfig = {
   apiKey: "AIzaSyCEue_cMeBg1B0PIPS6knYoiXvMJtJxZxI",
   authDomain: "website-25711.firebaseapp.com",
+  databaseURL: "https://website-25711-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "website-25711",
   storageBucket: "website-25711.appspot.com",
   messagingSenderId: "38660762483",
