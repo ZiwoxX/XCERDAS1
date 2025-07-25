@@ -21,18 +21,19 @@ const Schedule = () => {
 
     // Menentukan kelompok piket berdasarkan hari
     piketGroup = [
-        ["Amel", "Helmalia", "Fadli I", "Shera", "Nicollas"],
-        ["Windi", "Lista", "Jeriko", "Pratiwi", "Damar"],
-        ["Ainul Mardhiyyah", "Alisha Dayana", "Enjel", "Ferdynand", "Najim Al Haqoni"],
-        ["Jihan Nur Asqa", "Andini", "Muh Hizam Qabbani", "Muh Resqi Mubaraq", "Aldian Saputra"],
-        ["Nurul  Fitria Yusuf", "Cahaya Musdalifah", "Ahmad Syukran Baihaqi", "Mahmudani"],
+        ["Akifa Naila", "Akil Maula Syarif", "Muh.Tsaqif Al Fath", "Zahra Muadza", "Raihana Nadira Zhafira", "Hodia", "Anindya Ainun Herlita"],
+        ["Ainun Mardiansyah Rani", "Aprilia Hastika Sari", "Muh. Raihan Dzaki Ramadhan", "Najim Al Haqoni", "Naufal Qawwiyy Alfarasi", "Nufadillah Quinsya Puspa Ambar", "Syifa Bhatari"],
+        ["Vanezia Putri Ramadhani", "Reski Aulia Dania", "Reski Adhitya Achmar", "Qonitha Cleonima Firyal Ghina", "Muhammad Faiz Aswi", "Husnul Khatimah", "Muhammad Alif Falah Jordan"],
+        ["Rafailah Andini Hariyadi", "Nurnadya Afifah Nasaruddin", "Muh. Muflih Zaky", "Rasya Az Zahra", "Wiliam Tandungan", "Andi Naurah Khalilah Adiel", "Annisa Maylafaisa Fajar", "Muh. Ibrahim Fahrul"],
+        ["Mochamad Fathur Jibriel", "Miftahul Jannah", "Amira Zafirah", "Fitri", "Dhia Syarana", "Clarinta Amabel Lawryncia Rerung", "Zyqri Al Farezqhi Jaya" ],
+        
     ]
 
     const dayComponents = [
         null, // Kosongkan indeks 0
         Senin,
         Selasa,
-        Rabu,
+        Rabu,           
         Kamis,
         Jumat,
     ]
@@ -41,7 +42,7 @@ const Schedule = () => {
     const TodayComponent = dayComponents[new Date().getDay()]
 
     // Menampilkan nama-nama piket sesuai dengan hari saat ini
-    const currentPiketNames = piketGroup[new Date().getDay() - 1]
+    const currentPiketNames = piketGroup[new Date().getDay() -1]
 
     console.log("Current Day:", currentDay)
     console.log("Piket Group:", piketGroup)
@@ -61,7 +62,7 @@ const Schedule = () => {
                                 <TodayComponent />
                             </React.Suspense>
                         ) : (
-                            <p className="opacity-50">Tidak Ada Jadwal Hari Ini</p>
+                            <p className="opacity-50">Libur Bos</p>
                         )}
                     </div>
                 </div>
@@ -88,7 +89,7 @@ const Schedule = () => {
                         </div>
                     ))
                 ) : (
-                    <p className="opacity-50">Tidak Ada Jadwal Hari Ini</p>
+                    <p className="opacity-50">Libur bos</p>
                 )}
             </div>
         </>

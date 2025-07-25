@@ -8,7 +8,7 @@ const Home = () => {
         <div className="text-white px-[10%]" id="Home">
             <Navbar />
             <div className="lg:hidden">
-                <div className="font-bold text-5xl text-center py-20">IX 3 MTSN</div>
+                <div className="font-bold text-5xl text-center py-20">X CERDAS.1</div>
                 {/* Teks "Total Siswa" yang lebih keren */}
                 <h2 className="text-3xl font-semibold text-center py-4">
                     <span className="text-gradient">Total Siswa</span>
@@ -17,18 +17,18 @@ const Home = () => {
                     className="border-2 flex justify-between px-10 text-4xl font-bold py-2 relative"
                     id="TotalSiswa">
                     <div id="AngkaGradientBlue" className="flex items-center justify-center">
-                        11
+                        14
                     </div>
                     <div className="">
                         <span id="AngkaGradientBlue" className="text-5xl">
-                            2
+                            3
                         </span>
                         <span id="AngkaGradientPink" className="text-5xl">
-                            5
+                            6
                         </span>
                     </div>
                     <div id="AngkaGradientPink" className="flex items-center justify-center">
-                        14
+                        22
                     </div>
                 </div>
 
@@ -51,7 +51,7 @@ const Home = () => {
 						WELCOME
 					</h1>
 					<h6 className="text-sm" style={{ letterSpacing: "5px" }}>
-						TO IX 3 CLASS
+						TO X CERDAS.1 CLASS
 					</h6>
 				</div>
 			</div>

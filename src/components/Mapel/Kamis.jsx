@@ -48,4 +48,4 @@ const Kamis = () => {
 	)
 }
 
-export default Kamis
+export default Kamis;
