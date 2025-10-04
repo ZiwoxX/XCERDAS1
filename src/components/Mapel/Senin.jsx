@@ -1,4 +1,4 @@
-const Jumat = () => {
+const Senin = () => {
     return (
         <>
         	<div className="border-t-2 border-b-2 border-white flex justify-between py-[0.50rem] w-72 px-3" data-aos="fade-up" data-aos-duration="600">
@@ -30,4 +30,4 @@ const Jumat = () => {
     )
 } 
 
-export default Jumat
+export default Senin;
