@@ -71,19 +71,21 @@ body {
 }
 
 #Home {
-	position: relative;
-	width: 100%;
-	height: auto;
-	background: radial-gradient(
-			circle,
-			rgba(224, 107, 213, 0.8520658263305322) 0%,
-			rgba(75, 57, 198, 0.9052871148459384) 100%
-		),
-		url("D:\WEBSITE\Web-Kelas-V2\public\backgroundxcc1.jpg");
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: top;
-	z-index: 10;
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: radial-gradient(
+        circle,
+        rgba(224, 107, 213, 0.8520658263305322) 0%,
+        rgba(75, 57, 198, 0.9052871148459384) 100%
+    ),
+    /* JALUR PERBAIKAN DI SINI */
+    url("/Backgroundxc1nibos.jpg"); 
+    
+    background-repeat: no-repeat;
+    background-size: cover; /* Ganti 'contain' menjadi 'cover' untuk mengisi area */
+    background-position: center; /* Posisikan ke tengah */
+    z-index: 10;
 }
 
 #Home::after {
