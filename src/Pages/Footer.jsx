@@ -40,8 +40,8 @@ const Footer = () => {
 									</a>
 								</li>
 								<li>
-									<a href="" class="hover:underline">
-										Coming Soon
+									<a href="https://unclairone.vercel.app/" class="hover:underline">
+										Unclairone Gank
 									</a>
 								</li>
 							</ul>
