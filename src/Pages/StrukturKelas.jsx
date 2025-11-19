@@ -21,23 +21,20 @@ const StrukturKelas = () => {
 				<BorderStruktur Jabatan="Wali Kelas" Nama="Maqbullah Djafar S.Pd" Width="150px" />
 			</div>
 			
-			{/* PERUBAHAN 1: Tambahkan relative pada kontainer ini */}
-			<div className="flex flex-col justify-center items-center relative">
+			{/* Dikembalikan ke posisi normal */}
+			<div className="flex flex-col justify-center items-center">
 				
-				{/* PERUBAHAN 2: Terapkan absolute, top-4 (jarak 1rem), dan centering */}
+				{/* PERBAIKAN AKHIR: Tambahkan margin atas (mt-4) untuk mobile agar garis tidak menimpa */}
 				<img 
 					src="LineVertikal.svg" 
 					alt="" 
 					data-aos="fade-up" 
 					data-aos-duration="550" 
-					className="absolute top-4 left-1/2 transform -translate-x-1/2" 
+					className="mt-4 md:mt-0" 
 				/>
 
-				{/* PERUBAHAN 3: Tambahkan margin atas yang besar (mt-20) 
-				    untuk memberikan ruang agar elemen di bawah garis vertikal tidak tumpang tindih. 
-				    Angka ini bisa disesuaikan jika perlu, tapi mt-20 harus cukup aman.
-				*/}
-				<div className="lg:flex mt-20"> 
+				{/* Dihapus mt-20 */}
+				<div className="lg:flex"> 
 					<img
 						src="LineHorizontal.svg"
 						alt=""
