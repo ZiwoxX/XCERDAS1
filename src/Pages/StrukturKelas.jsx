@@ -21,7 +21,8 @@ const StrukturKelas = () => {
 				<BorderStruktur Jabatan="Wali Kelas" Nama="Maqbullah Djafar S.Pd" Width="150px" />
 			</div>
 			<div className="flex flex-col justify-center items-center">
-				<img src="LineVertikal.svg" alt="" data-aos="fade-up" data-aos-duration="550" />
+				{/* PERBAIKAN: Menambahkan mt-3 agar garis tidak menimpa kotak Wali Kelas di tampilan mobile */}
+				<img src="LineVertikal.svg" alt="" data-aos="fade-up" data-aos-duration="550" className="mt-3" /> 
 
 				<div className="lg:flex">
 					<img
@@ -157,7 +158,7 @@ const StrukturKelas = () => {
 				</div>
 
 				{/* Kesehatan */}
-				{/* 	<div
+				{/* <div
 					className=" absolute bottom-[14.5%] lg:hidden"
 					data-aos="fade-up"
 					data-aos-duration="1200">
