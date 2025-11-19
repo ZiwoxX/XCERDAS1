@@ -20,11 +20,24 @@ const StrukturKelas = () => {
 			<div data-aos="fade-up" data-aos-duration="500" className="mt-14 md:mt-10">
 				<BorderStruktur Jabatan="Wali Kelas" Nama="Maqbullah Djafar S.Pd" Width="150px" />
 			</div>
-			<div className="flex flex-col justify-center items-center">
-				{/* PERBAIKAN: Menambahkan mt-3 agar garis tidak menimpa kotak Wali Kelas di tampilan mobile */}
-				<img src="LineVertikal.svg" alt="" data-aos="fade-up" data-aos-duration="550" className="mt-3" /> 
+			
+			{/* PERUBAHAN 1: Tambahkan relative pada kontainer ini */}
+			<div className="flex flex-col justify-center items-center relative">
+				
+				{/* PERUBAHAN 2: Terapkan absolute, top-4 (jarak 1rem), dan centering */}
+				<img 
+					src="LineVertikal.svg" 
+					alt="" 
+					data-aos="fade-up" 
+					data-aos-duration="550" 
+					className="absolute top-4 left-1/2 transform -translate-x-1/2" 
+				/>
 
-				<div className="lg:flex">
+				{/* PERUBAHAN 3: Tambahkan margin atas yang besar (mt-20) 
+				    untuk memberikan ruang agar elemen di bawah garis vertikal tidak tumpang tindih. 
+				    Angka ini bisa disesuaikan jika perlu, tapi mt-20 harus cukup aman.
+				*/}
+				<div className="lg:flex mt-20"> 
 					<img
 						src="LineHorizontal.svg"
 						alt=""
