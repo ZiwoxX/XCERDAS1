@@ -21,19 +21,18 @@ const StrukturKelas = () => {
 				<BorderStruktur Jabatan="Wali Kelas" Nama="Maqbullah Djafar S.Pd" Width="150px" />
 			</div>
 			
-			{/* Dikembalikan ke posisi normal */}
 			<div className="flex flex-col justify-center items-center">
 				
-				{/* PERBAIKAN AKHIR: Tambahkan margin atas (mt-4) untuk mobile agar garis tidak menimpa */}
+				{/* PERBAIKAN 1: Garis Wali Kelas - Kembali ke flow normal (mt-4) */}
 				<img 
 					src="LineVertikal.svg" 
 					alt="" 
 					data-aos="fade-up" 
 					data-aos-duration="550" 
-					className="mt-4 md:mt-0" 
+					className="mt-4" 
 				/>
 
-				{/* Dihapus mt-20 */}
+				{/* Garis Horizontal ke Ketua & Wakil Ketua */}
 				<div className="lg:flex"> 
 					<img
 						src="LineHorizontal.svg"
@@ -151,37 +150,27 @@ const StrukturKelas = () => {
 					</div>
 				</div>
 
-				<div className="relative top-[-15rem]" data-aos="fade-up" data-aos-duration="900">
+				{/* PERBAIKAN 2: Garis Vertikal Anggota - Menggunakan nilai top negatif yang panjang */}
+				<div className="relative top-[-12rem]" data-aos="fade-up" data-aos-duration="900">
 					<img src="LineVertikal3.svg" alt="" />
 				</div>
 
-				<div className=" absolute bottom-[15%] lg:bottom-[20%] " data-aos="fade-up" data-aos-duration="1000">
+				{/* PERBAIKAN 3: Kotak Anggota - Hapus absolute position dan tambahkan anchor text (<a>) */}
+				<div className="relative top-[-12.5rem]" data-aos="fade-up" data-aos-duration="1000">
 					<div className="flex justify-center items-center flex-col">
-						<img src="LineVertikal3.svg" alt="" className="lg:h-3" />
-						<img src="LineVertikal3.svg" alt="" className="lg:-z-50" />
-						<img src="LineVertikal3.svg" alt="" className="lg:hidden" />
 						<img src="Circle.svg" alt="" className="relative top-[-0.7rem]" />
 						<div className="relative bottom-3">
-							<BorderStruktur Jabatan="Anggota" Nama="Siswa-Siswi X.CERDAS 1" Width="120px" />
+							<a 
+                                href="https://unclairone.vercel.app/" // Ganti '#' dengan link tujuan Anda, atau biarkan '#' jika hanya sebagai placeholder
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="no-underline">
+								<BorderStruktur Jabatan="Anggota" Nama="Siswa-Siswi X.CERDAS 1" Width="120px" />
+							</a>
 						</div>
 					</div>
 				</div>
 
-				{/* Kesehatan */}
-				{/* <div
-					className=" absolute bottom-[14.5%] lg:hidden"
-					data-aos="fade-up"
-					data-aos-duration="1200">
-					<div className="flex justify-center items-center flex-col">
-						<img src="LineVertikal3.svg" alt="" className="lg:hidden" />
-						<img src="Circle.svg" alt="" className="relative top-[-0.7rem]" />
-						<div className="relative bottom-3">
-							<BorderStruktur Jabatan="Kesehatan" Nama="Eki" Width="120px" />
-							<div className="py-[3%]"></div>
-							<BorderStruktur Jabatan="" Nama="Hendri" Width="120px" />
-						</div>
-					</div>
-				</div> */}
 			</div>
 		</div>
 	)
