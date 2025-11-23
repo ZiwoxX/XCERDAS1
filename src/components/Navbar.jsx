@@ -10,13 +10,24 @@ const Navbar = () => {
 	return (
 		<>
 			{/* Mobile */}
-			<div className="flex justify-between relative top-3 lg:hidden">
+			<div className="flex justify-between relative top-3 lg:hidden items-start"> {/* items-start agar align rapi */}
 				<div className="w-10 h-10 rounded-full flex justify-center items-center" id="UserButton">
 					<img src="/NavIcon.png" alt="" className="w-6 h-6" onClick={toggleMenu} />
 				</div>
-				<div className={`text-center text-white ${isMenuOpen ? "hidden" : ""}`}>
+				
+				{/* BAGIAN TENGAH HEADER MOBILE */}
+				<div className={`text-center text-white flex flex-col items-center ${isMenuOpen ? "hidden" : ""}`}>
 					<div className="text-[0.7rem]">Hi, visitor!</div>
 					<div className="font-bold text-[1rem]">WELCOME</div>
+					
+					{/* --- Tambahan Tombol Pintas "About" --- */}
+					<a 
+						href="https://unclairone.vercel.app/" 
+						className="mt-1 text-[0.65rem] border border-white/50 px-3 py-1 rounded-full bg-white/10 hover:bg-white/30 transition-all animate-pulse"
+					>
+						Check About Us ✨
+					</a>
+					{/* ------------------------------------- */}
 				</div>
 
 				<div
@@ -41,13 +52,11 @@ const Navbar = () => {
 							</a>
 						</li>
 						
-						{/* --- Menu About Baru (Mobile) --- */}
 						<li className="mb-4">
 							<a href="https://unclairone.vercel.app/" className="text-white opacity-80 text-lg font-bold">
 								About
 							</a>
 						</li>
-						{/* ------------------------------- */}
 
 						<li className="mb-4">
 							<a href="#Gallery" className="text-white opacity-80 text-lg font-bold">
@@ -74,15 +83,11 @@ const Navbar = () => {
 							Home
 						</a>
 					</li>
-
-					{/* --- Menu About Baru (Desktop) --- */}
 					<li className="mb-4">
 						<a href="https://unclairone.vercel.app/" className="text-white opacity-80 text-[1rem] font-semibold">
-							About Us
+							About
 						</a>
 					</li>
-					{/* ------------------------------- */}
-
 					<li className="mb-4">
 						<a href="#Gallery" className="text-white opacity-80 text-[1rem] font-semibold">
 							Gallery
