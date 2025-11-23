@@ -34,12 +34,21 @@ const Navbar = () => {
 						isMenuOpen ? "translate-x-0" : "-translate-x-full"
 					}`}
 					id="IsiNavbar">
-					<ul className="mt-8">
+					<ul className="mt-8 pl-6">
 						<li className="mb-4">
 							<a href="#" className="text-white opacity-80 text-lg font-bold">
 								Home
 							</a>
 						</li>
+						
+						{/* --- Menu About Baru (Mobile) --- */}
+						<li className="mb-4">
+							<a href="https://unclairone.vercel.app/" className="text-white opacity-80 text-lg font-bold">
+								About
+							</a>
+						</li>
+						{/* ------------------------------- */}
+
 						<li className="mb-4">
 							<a href="#Gallery" className="text-white opacity-80 text-lg font-bold">
 								Gallery
@@ -54,7 +63,7 @@ const Navbar = () => {
 				</div>
 			</div>
 
-			{/* Dekstop */}
+			{/* Desktop */}
 			<div className="flex justify-between relative top-3 hidden lg:flex">
 				<div>
 					<img src="/LOGO SMANSAA.png" className="w-24 h-24 rounded-full" alt="" />
@@ -65,6 +74,15 @@ const Navbar = () => {
 							Home
 						</a>
 					</li>
+
+					{/* --- Menu About Baru (Desktop) --- */}
+					<li className="mb-4">
+						<a href="https://unclairone.vercel.app/" className="text-white opacity-80 text-[1rem] font-semibold">
+							About Us
+						</a>
+					</li>
+					{/* ------------------------------- */}
+
 					<li className="mb-4">
 						<a href="#Gallery" className="text-white opacity-80 text-[1rem] font-semibold">
 							Gallery
